@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from 'axios';
 const Movies = () => {
-  const [movies, setMovies] = useState(null)
+  const [movies, setMovies] = useState()
      var settings = {
         dots: true,
         infinite: false,
@@ -51,7 +51,6 @@ const fetchData =() =>{
 useEffect(() =>{
   fetchData()
 }, [])
-
 console.log(movies)
   return (
     <div className='md:px-[77px] px-[30px] fetchedMoviesw-full mt-[63px]'>
@@ -62,7 +61,7 @@ console.log(movies)
         <h1 className='text-[24px] font-normal text-[#000000] mb-[18px]'>Movie Category Name</h1>
         <Slider {...settings}>
             <div className='slide text-[#FFFFFF]'  >
-                   <p>{movies.Title}</p>
+                   <p>{movies?.Title}</p>
             </div>
             
         </Slider>
