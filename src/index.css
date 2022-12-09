@@ -15,3 +15,18 @@ html{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.slide{
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-color: #000;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
